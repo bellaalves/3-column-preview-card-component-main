@@ -1,0 +1,135 @@
+:root {
+  /* Primary */
+  --cor-p1: hsl(31, 77%, 52%);
+  --cor-p2: hsl(184, 100%, 22%);
+  --cor-p3: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --cor-0: hsla(0, 0%, 100%, 0.75);
+  --cor-1: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  margin: 0 auto 20px auto;
+  display: flex;
+}
+
+.card-container {
+  padding: 48px 64px;
+}
+
+.card-container h1 {
+  font-family: "Big Shoulders Display", serif;
+  color: var(--cor-1);
+  font-size: 2.4rem;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.card-container h1::before {
+  content: "";
+  display: block;
+  background-image: url(../images/icon-sedans.svg);
+  width: 64px;
+  height: 40px;
+  margin-bottom: 32px;
+}
+
+.card-container:nth-child(2) h1::before {
+  background-image: url(../images/icon-suvs.svg);
+}
+
+.card-container:last-child h1::before {
+  background-image: url(../images/icon-luxury.svg);
+}
+
+.card-container p {
+  color: var(--cor-0);
+  line-height: 2;
+  margin-bottom: 24px;
+  max-width: 25ch;
+}
+
+.card-container a {
+  background-color: var(--cor-1);
+  padding: 16px 32px;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+.card-container a:hover {
+  background-color: var(--cor-0);
+}
+
+.card-container:first-child a {
+  color: var(--cor-p1);
+}
+
+.card-container:nth-child(2) a {
+  color: var(--cor-p2);
+}
+
+.card-container:last-child a {
+  color: var(--cor-p3);
+}
+
+.first {
+  background-color: var(--cor-p1);
+  border-radius: 10px 0 0 10px;
+}
+
+.second {
+  background-color: var(--cor-p2);
+}
+
+.third {
+  background-color: var(--cor-p3);
+  border-radius: 0 10px 10px 0;
+}
+
+.attribution {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .first {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .third {
+    border-radius: 0 0 10px 10px;
+  }
+}
