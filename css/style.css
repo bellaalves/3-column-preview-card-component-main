@@ -26,7 +26,6 @@ a {
 
 body {
   font-family: "Lexend Deca", sans-serif;
-  max-width: 1440px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,6 +33,7 @@ body {
 }
 
 .card {
+  max-width: 1440px;
   margin: 0 auto 20px auto;
   display: flex;
 }
